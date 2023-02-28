@@ -54,9 +54,9 @@ body{
     #product-section-resview{
         display: none;
     }
-.overflow-hidden-x {
+/*.overflow-hidden-x {
     overflow-x: hidden; 
-}
+}*/
 .footer-contact h6 {
     padding: 0 0.5rem;
     color: #7993cb;
@@ -609,6 +609,9 @@ body{
 }
 .footer-logo-text{
     width: 100%;
+}
+.footer-logo-text p{
+    margin-bottom: 0rem;
 }
 .footer-logo-text h6{
     color: #fff;
