@@ -406,16 +406,16 @@ body{
 }
 .dpass-txt1{
     color: #101d42;
-    font-family: 'Roboto-Regular';
-    font-size: 25px;
+    font-family: 'Roboto-Light';
+    font-size: 22px;
 }
 .dpass-txt2{
     color: #101d42;
     font-family: 'Roboto-Light';
-    font-size: 20px;
+    font-size: 18px;
 }
 .text-count-cus {
-    color: #9a9a9a;
+    color: #676666;
     font-family: 'Roboto-Regular';
     font-size: 22px;
     margin-bottom: 0rem;
@@ -423,7 +423,7 @@ body{
 .text-p-cus{
     color: #0a2e93;
     font-family: 'Roboto-Regular';
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 2rem;
 }
 #p1, #p2, #p3, #p4, #p5{
