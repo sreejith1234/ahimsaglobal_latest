@@ -657,7 +657,7 @@ body{
     margin-left: 7.5px;
 }
 .logo {
-    position: absolute;
+    position: fixed;
     z-index: 1500;
     left: 4.1%;
     top: 5%;
@@ -1434,6 +1434,11 @@ a{
     border-radius: 10px;
     background-color: #90A4AE ;
 }
-
+.carousel-item{
+    height:100%;
+}
+.slider-img{
+    height:100%;
+}
 
 
