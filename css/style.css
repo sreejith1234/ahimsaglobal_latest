@@ -626,7 +626,7 @@ body{
     align-items: center;
 }
 .footer-logo-img{
-    padding-right: 15px;
+    margin-right: 15px;
     width: 70px;
 }
 .footer-logo-img img{
@@ -1225,8 +1225,8 @@ a{
 }
 
 .flag{
-    width:50px;
-    padding: 10px;
+    width:30px;
+    margin: 10px;
     cursor: pointer;
 }
 .flag img{
