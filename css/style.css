@@ -20,7 +20,7 @@
          url('../font/roboto-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 @font-face {
     font-family: 'Roboto-Regular';
@@ -28,6 +28,7 @@
          url('../font/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 
 }
 @font-face {
@@ -36,6 +37,7 @@
          url('../font/roboto-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 body{
     color: #101d42;
