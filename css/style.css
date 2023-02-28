@@ -613,6 +613,10 @@ body{
 .footer-logo-text p{
     margin-bottom: 0rem;
 }
+.footer-head p{
+    color: #9d9fab;
+    padding: 0 1rem;
+}
 .footer-logo-text h6{
     color: #fff;
     font-size: 20px;
@@ -636,6 +640,7 @@ body{
 }
 .footer-contact p{
     color: #9d9fab;
+    padding: 0 0.5rem;
 }
 .copyright-inner{
     display: flex;
