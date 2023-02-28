@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: Roboto-Light;
   src: url(../font/Roboto-Light.ttf);
 }
@@ -9,6 +9,31 @@
 @font-face {
   font-family: Roboto-Bold;
   src: url(../font/Roboto-Bold.ttf);
+}*/
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../font/roboto-light-webfont.woff2') format('woff2'),
+         url('../font/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../font/roboto-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../font/roboto-bold-webfont.woff2') format('woff2'),
+         url('../font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 body{
     color: #101d42;
