@@ -20,7 +20,6 @@
          url('../font/roboto-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 @font-face {
     font-family: 'Roboto-Regular';
@@ -28,7 +27,6 @@
          url('../font/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 
 }
 @font-face {
@@ -37,7 +35,6 @@
          url('../font/roboto-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 body{
     color: #101d42;
@@ -402,13 +399,13 @@ body{
 }
 .dpass-txt1{
     color: #101d42;
-    font-family: 'Roboto-Light';
+    font-family: 'Roboto-Regular';
     font-size: 22px;
 }
 .dpass-txt2{
     color: #101d42;
     font-family: 'Roboto-Light';
-    font-size: 18px;
+    font-size: 20px;
 }
 .text-count-cus {
     color: #676666;
@@ -419,7 +416,7 @@ body{
 .text-p-cus{
     color: #0a2e93;
     font-family: 'Roboto-Regular';
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 2rem;
 }
 #p1, #p2, #p3, #p4, #p5{
