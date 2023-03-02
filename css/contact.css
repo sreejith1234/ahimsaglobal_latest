@@ -1,4 +1,30 @@
-/*Contact sectiom*/
+/*Contact section*/
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../font/roboto-light-webfont.woff2') format('woff2'),
+        url('../font/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../font/roboto-regular-webfont.woff2') format('woff2'),
+        url('../font/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../font/roboto-bold-webfont.woff2') format('woff2'),
+        url('../font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 .content-header{
   color:#fcc500;
   font-size: 45px;
@@ -110,4 +136,26 @@ textarea.form-control {
         top: 15px;
         font-size: 35px;
     }
+}
+.contact-head .txt-reg {
+    font-family: Roboto-Light !important;
+    font-size: 28px;
+}
+.contact-head .txt-caps {
+    font-family: Roboto-Light !important;
+    font-size: 30px;
+}
+.container::before{
+  display: none;
+}
+.contact-head a {
+    font-family: 'Roboto-Bold';
+    font-weight: 600;
+    text-transform: initial;
+    font-size: 24px;
+}
+.contact-text p {
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+    opacity: 0.7;
 }
