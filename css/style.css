@@ -836,6 +836,7 @@ body{
     width:100%;
     display:flex;
     padding-top: 50px;
+    height: 50rem;
 }
 .graph{
     width:50%;
