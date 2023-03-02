@@ -30,6 +30,7 @@
 }
 .contact-text{
         padding: 0px 25px;
+        text-align: left;
     }
 .form-line{
   border: none;
@@ -93,4 +94,20 @@ textarea.form-control {
   background-color: transparent;
   color: #fff;
 
+}
+.close-btn{
+    position: fixed;
+    right: 60px;
+    top: 30px;
+    font-size: 40px;
+}
+.close-btn a{
+    color:#fff;
+}
+@media only screen and (max-width: 768px){
+    .close-btn {
+        right: 30px;
+        top: 15px;
+        font-size: 35px;
+    }
 }
