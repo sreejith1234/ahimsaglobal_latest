@@ -110,11 +110,4 @@ var arrLang = {
 			    document.getElementById('mr').style.display = 'block';
 			  }
 			}
-	}
-
-
-if (myObject != null) {
-  var id = myObject.id;
-  // rest of your code
-}
-    
+	}   
