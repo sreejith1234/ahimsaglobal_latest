@@ -73,8 +73,8 @@ var arrLang = {
 	  
     });
 
-    /*let item = localStorage.getItem('stored_lang');*/
-    /*alert(item);*/
+    let item = localStorage.getItem('stored_lang');
+    alert(item);
 
     document.addEventListener('click', function(event) {
 		  if (event.target.id === 'mr') {
@@ -97,14 +97,17 @@ var arrLang = {
 		  var element = document.getElementById(localStorage.getItem('stored_lang'));
 			
 			if (element != null) {
+				alert("entered")
 			  // Check if the element is the element with the ID 'mr'
 			  if (element.id === 'mr') {
+			  	alert("mr")
 			    document.getElementById('slide1_sub_box').style.height = '400';
 			    document.getElementById('mr').style.display = 'none';
 			    document.getElementById('en').style.display = 'block';
 			  }
 			  // Check if the element is the element with the ID 'en'
 			  else if (element.id === 'en') {
+			  	alert("en")
 			    document.getElementById('slide1_sub_box').style.height = '320';
 			    document.getElementById('en').style.display = 'none';
 			    document.getElementById('mr').style.display = 'block';
