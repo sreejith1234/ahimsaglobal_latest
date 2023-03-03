@@ -29,13 +29,13 @@ function setLanguage(lang) {
   switch (lang) {
     case 'en':
       heading.textContent = 'Welcome to my website';
-      englishBtn.disabled = true;
-      spanishBtn.disabled = false;
+      englishBtn.hidden = true;
+      spanishBtn.hidden = false;
       break;
     case 'es':
       heading.textContent = 'Bienvenido a mi sitio web';
-      englishBtn.disabled = false;
-      spanishBtn.disabled = true;
+      englishBtn.hidden = false;
+      spanishBtn.hidden = true;
       break;
   }
 }
