@@ -95,21 +95,26 @@ var arrLang = {
 		window.onload = function() {
 		  // Get the element with the ID stored in local storage
 		  var element = document.getElementById(localStorage.getItem('stored_lang'));
+			
+			if (element != null) {
+			  // Check if the element is the element with the ID 'mr'
+			  if (element.id === 'mr') {
+			    document.getElementById('slide1_sub_box').style.height = '400';
+			    document.getElementById('mr').style.display = 'none';
+			    document.getElementById('en').style.display = 'block';
+			  }
+			  // Check if the element is the element with the ID 'en'
+			  else if (element.id === 'en') {
+			    document.getElementById('slide1_sub_box').style.height = '320';
+			    document.getElementById('en').style.display = 'none';
+			    document.getElementById('mr').style.display = 'block';
+			  }
+			}
+	}
 
-		  // Check if the element is the element with the ID 'mr'
-		  if (element.id === 'mr') {
-		    document.getElementById('slide1_sub_box').style.height = '400';
-		    document.getElementById('mr').style.display = 'none';
-		    document.getElementById('en').style.display = 'block';
-		  }
-		  // Check if the element is the element with the ID 'en'
-		  else if (element.id === 'en') {
-		    document.getElementById('slide1_sub_box').style.height = '320';
-		    document.getElementById('en').style.display = 'none';
-		    document.getElementById('mr').style.display = 'block';
-		  }
-		}
 
-
-
+if (myObject != null) {
+  var id = myObject.id;
+  // rest of your code
+}
     
