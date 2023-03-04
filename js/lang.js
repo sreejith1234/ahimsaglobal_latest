@@ -2,7 +2,7 @@ var arrLang = {
 
     'en': {
         //slide1
-        'title1': 'Data Analysis',
+        'titleone': 'Data Analysis',
         'title1sub': 'Our world revolves around your data. We help you aggregate, analyse, infer and derive meaningful / actionable insights hidden in real-time datasets.',
         'contactus': 'Contact Us',
 
@@ -23,7 +23,7 @@ var arrLang = {
 
     'sp': {
         //slide1
-        'title1': 'Análisis de datos',
+        'titleone': 'Análisis de datos',
         'title1sub': 'Nuestro mundo gira en torno a sus datos. Le ayudamos a agregar, analizar, inferir y obtener información significativa y práctica oculta en conjuntos de datos en tiempo real.',
         'contactus': 'Contacte con nosotros',
 
