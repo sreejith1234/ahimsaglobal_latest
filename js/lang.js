@@ -21,33 +21,36 @@ var arrLang = {
         'title4sub2': 'We have built flexible architectures that can scale to any specialty across the hospital ecosystem.',
     },
 
-    'mr': {
+    'sp': {
         //slide1
-        'title1': 'Tātari Raraunga',
-        'title1sub': 'Ka huri to tatou ao ki o raraunga. Ka awhina matou ki a koe ki te whakahiato, ki te wetewete, ki te whakatau me te whakaputa i nga tirohanga whai kiko / mahi e huna ana i roto i nga huingararaunga wa-tūturu.',
-        'contactus': 'Whakapā mai',
+        'title1': 'Análisis de datos',
+        'title1sub': 'Nuestro mundo gira en torno a sus datos. Le ayudamos a agregar, analizar, inferir y obtener información significativa y práctica oculta en conjuntos de datos en tiempo real.',
+        'contactus': 'Contacte con nosotros',
 
         //slide2
-        'title2': 'Mahere Tūroro',
-        'title2sub1': 'Ka whakamamatitia e matou nga mapi haerenga a nga turoro mai i te tuku ki te whai ake me tua atu.',
-        'title2sub2': 'Te whakaahei i nga kaiwhaiwhai mai i nga tohungatanga maha, nga GP me nga kaitohutohu ki te mahi i runga i te huarahi haumanu o te manawanui',
+        'title2': 'Mapas de pacientes',
+        'title2sub1': 'Digitalizamos los mapas del recorrido del paciente desde la derivación hasta el seguimiento y más allá.',
+        'title2sub2': 'Permitiendo a las partes interesadas de múltiples especialidades, médicos de cabecera y consultores actuar de forma proactiva en el recorrido clínico de un paciente.',
 
         //slide3
-        'title3': 'Whakatauira Matapae',
-        'title3sub1': 'Ko a maatau otinga whakatauira matapae ka awhina i nga kaihoko ki te whakamahere mo nga ra kei mua.',
-        'title3sub2': 'Rauemi (hanganga, tangata) me te whakamahere haumi, i runga i te STATUS QUO me te ahua TO-BE.',
+        'title3': 'Modelización predictiva',
+        'title3sub1': 'Nuestras soluciones de modelización predictiva ayudan a los clientes a planificar el futuro.',
+        'title3sub2': 'Planificación de recursos (infraestructuras, personal) e inversiones, teniendo en cuenta el STATUS QUO y hacia el TO-BE state.',
 
         //slide4
-        'title4': 'Nga Rongoa Hauora Ake',
-        'title4sub1': 'He hohonu nga tirohanga a te roopu Ahimsa Global ki nga mahi hinengaro i nga whare wananga o te hiranga.',
-        'title4sub2': 'Kua hangahia e matou nga hoahoanga ngawari ka taea te huri ki tetahi momo motuhake puta noa i te rauwiringa kaiao o te hohipera.',
+        'title4': 'Soluciones sanitarias a medida',
+        'title4sub1': 'El equipo de Ahimsa Global tiene un profundo conocimiento de la práctica de la cardiología en centros terciarios de excelencia.',
+        'title4sub2': 'Hemos construido arquitecturas flexibles que pueden escalar a cualquier especialidad en todo el ecosistema hospitalario',
     }
 };
 
 $(function() {
   var storedLang = localStorage.getItem('stored_lang') || 'en';
   var slide1SubBox = $('#slide1_sub_box');
-  var mrButton = $('#mr');
+  var slide2SubBox = $('#slide2_sub_box');
+  var slide3SubBox = $('#slide3_sub_box');
+  var slide4SubBox = $('#slide4_sub_box');
+  var mrButton = $('#sp');
   var enButton = $('#en');
 
   function translateLang(lang) {
@@ -59,6 +62,15 @@ $(function() {
   function setSlide1SubBoxHeight(height) {
     slide1SubBox.css('height', height);
   }
+  function setSlide2SubBoxHeight(height) {
+    slide2SubBox.css('height', height);
+  }
+  function setSlide3SubBoxHeight(height) {
+    slide3SubBox.css('height', height);
+  }
+  function setSlide4SubBoxHeight(height) {
+    slide4SubBox.css('height', height);
+  }
 
   function hideButton(button) {
     button.hide();
@@ -69,25 +81,37 @@ $(function() {
   }
 
   translateLang(storedLang);
-  setSlide1SubBoxHeight(storedLang === 'mr' ? 400 : 320);
+  setSlide1SubBoxHeight(storedLang === 'sp' ? 350 : 320);
+  setSlide2SubBoxHeight(storedLang === 'sp' ? 475 : 415);
+  setSlide3SubBoxHeight(storedLang === 'sp' ? 455 : 380);
+  setSlide4SubBoxHeight(storedLang === 'sp' ? 485 : 415);
 
   $('.translate').click(function() {
     var lang = $(this).attr('id');
     localStorage.setItem('stored_lang', lang);
     translateLang(lang);
-    setSlide1SubBoxHeight(lang === 'mr' ? 400 : 320);
-    hideButton(lang === 'mr' ? mrButton : enButton);
-    showButton(lang === 'mr' ? enButton : mrButton);
+    setSlide1SubBoxHeight(lang === 'sp' ? 350 : 320);
+    setSlide2SubBoxHeight(lang === 'sp' ? 475 : 415);
+    setSlide3SubBoxHeight(lang === 'sp' ? 455 : 380);
+    setSlide4SubBoxHeight(lang === 'sp' ? 485 : 415);
+    hideButton(lang === 'sp' ? mrButton : enButton);
+    showButton(lang === 'sp' ? enButton : mrButton);
   });
 
   mrButton.click(function() {
-    setSlide1SubBoxHeight(400);
+    setSlide1SubBoxHeight(350);
+    setSlide2SubBoxHeight(475);
+    setSlide3SubBoxHeight(455);
+    setSlide4SubBoxHeight(485);
     hideButton(mrButton);
     showButton(enButton);
   });
 
   enButton.click(function() {
     setSlide1SubBoxHeight(320);
+    setSlide2SubBoxHeight(415);
+    setSlide3SubBoxHeight(380);
+    setSlide4SubBoxHeight(415);
     hideButton(enButton);
     showButton(mrButton);
   });
