@@ -92,6 +92,43 @@ var arrLang = {
     		'product6txt9': 'MORE PATIENT STAKEHOLDERS',
     		'product6txt10': 'ICU staff, anaesthetists, cardiologists, nurses, specialist consultants',
 
+    		//aboutus
+    		'aboutus': 'About Us',
+    		'abouttxt1': 'Ahimsa started at a point of confluence. When a small, interdisciplinary team met to discuss about solving an age old problem.',
+    		'abouttxt2': 'How can technology help clinicians, provide best value to their patients?',
+    		'abouttxt3': 'How can process transformation enable productivity for the doctor?',
+    		'abouttxt4': 'How can patients contribute and be responsible towards their own health?',
+    		'abouttxt5': 'We are a bunch of software engineers who specialize in AI / ML, big data, analytics, information architecture, HCI (Human Computer Interaction) principles, application design and QA.',
+    		'abouttxt6': 'We are supported by a team of clinicians (specialists), policy makers, healthcare managers, nurses, regulatory compliance specialists, third party auditors from around the world (NZ, US, Netherlands, India)',
+    		
+    		//aboutsub
+    		'abtxt1': 'click',
+    		'abtxt2': 'less',
+    		'abtxt3': 'decide',
+    		'abtxt4': 'faster',
+    		'abtxt5': 'go',
+    		'abtxt6': 'paper-less',
+    		'abtxt7': 'engage',
+    		'abtxt8': 'patients',
+    		'abtxt9': 'share',
+    		'abtxt10': 'information',
+    		'abtxt11': 'device',
+    		'abtxt12': 'agnostic',
+
+    		//block
+    		'blockh1': 'Simplify a clinicians life at the hospital',
+    		'blocktxt1': 'by ensuring that key decision making imformation is available at all times',
+    		'blockh2': 'Enable follow up and tracking of every patient',
+    		'blocktxt2': 'data originates from his/her residence (via community nurse visit) and ensures further followup and medical compliance (post procedure / advice)',
+    		'blockh3': 'Develop AI algorithms to facilitate',
+    		'blocktxt3': 'Predictive analytics for managing patient throughput & measure procedure / device efficacies',
+    		'blockh4': 'Derive Social Analytics',
+    		'blocktxt4': 'Community based, patient centric, clinician driven. Patient health and engagement at the core',
+    		
+    		//footer
+    		'ourlocation': 'Our Locations',
+    		'ourproducts': 'Our Products',
+    		'copyright': 'Copyright',
     },
 
     'sp': {
@@ -187,6 +224,43 @@ var arrLang = {
     		'product6txt9': 'MÁS PARTES INTERESADAS EN EL PACIENTE',
     		'product6txt10': 'personal de la UCI, anestesistas, cardiólogos, enfermeras, consultores especializados',
 
+    		//aboutus
+    		'aboutus': 'Quiénes somos',
+    		'abouttxt1': 'Ahimsa comenzó en un punto de confluencia. Cuando un pequeño equipo interdisciplinar se reunió para tratar de resolver un viejo problema.',
+    		'abouttxt2': 'Cómo puede la tecnología ayudar a los médicos a ofrecer el mejor valor a sus pacientes?',
+    		'abouttxt3': 'Cómo puede la transformación de procesos aumentar la productividad de los médicos?',
+    		'abouttxt4': 'Cómo pueden los pacientes contribuir y ser responsables de su propia salud?',
+    		'abouttxt5': 'Somos un grupo de ingenieros de software especializados en IA / ML, big data, análisis, arquitectura de la información, principios de HCI (Human Computer Interaction), diseño de aplicaciones y control de calidad.',
+    		'abouttxt6': 'Contamos con el apoyo de un equipo de médicos (especialistas), responsables políticos, gestores sanitarios, enfermeros, especialistas en cumplimiento normativo y auditores externos de todo el mundo (Nueva Zelanda, Estados Unidos, Países Bajos, India).',
+    		
+    		//aboutsub
+    		'abtxt1': 'haga clic',
+    		'abtxt2': 'menos',
+    		'abtxt3': 'decidir',
+    		'abtxt4': 'más rápido',
+    		'abtxt5': 'ir',
+    		'abtxt6': 'sin papel',
+    		'abtxt7': 'involucrar a los',
+    		'abtxt8': 'pacientes',
+    		'abtxt9': 'compartir',
+    		'abtxt10': 'información',
+    		'abtxt11': 'dispositivo',
+    		'abtxt12': 'agnóstico',
+
+    		//block
+    		'blockh1': 'Simplificar la vida del clínico en el hospital',
+    		'blocktxt1': 'garantizando que la información clave para la toma de decisiones esté disponible en todo momento.',
+    		'blockh2': 'Permitir el seguimiento y la localización de cada paciente',
+    		'blocktxt2': 'los datos se originan en su residencia (a través de la visita de la enfermera comunitaria) y garantizan el seguimiento posterior y el cumplimiento médico (después del procedimiento / asesoramiento)',
+    		'blockh3': 'Desarrollar algoritmos de IA para facilitar',
+    		'blocktxt3': 'Análisis predictivos para gestionar el rendimiento de los pacientes y medir la eficacia de los procedimientos y los dispositivos.',
+    		'blockh4': 'Derivar análisis sociales',
+    		'blocktxt4': 'Basado en la comunidad, centrado en el paciente e impulsado por el médico. Salud y compromiso del paciente en el centro.',
+    
+    		//footer
+    		'ourlocation': 'Nuestras sedes',
+    		'ourproducts': 'Nuestros productos',
+    		'copyright': 'Derechos de autor',
     }
 };
 
@@ -196,8 +270,19 @@ $(function() {
   var slide2SubBox = $('#slide2_sub_box');
   var slide3SubBox = $('#slide3_sub_box');
   var slide4SubBox = $('#slide4_sub_box');
+  var textCapSub1 = $('.text-cap-sub-1');
+  var textCapSub2 = $('.text-cap-sub-2');
   var mrButton = $('#sp');
   var enButton = $('#en');
+  var enTimeline1 = $('#timeline1_en');
+  var spTimeline1 = $('#timeline1_sp');
+  var enTimeline2 = $('#timeline2_en');
+  var spTimeline2 = $('#timeline2_sp');
+  var enTimeline3 = $('#timeline3_en');
+  var spTimeline3 = $('#timeline3_sp');
+  var enTimeline4 = $('#timeline4_en');
+  var spTimeline4 = $('#timeline4_sp');
+  
 
   function translateLang(lang) {
     $('.lang').each(function() {
@@ -218,6 +303,14 @@ $(function() {
     slide4SubBox.css('height', height);
   }
 
+  function textCapSub1FontSize(size) {
+  	textCapSub1.css('font-size', size);
+	}
+
+	function textCapSub2FontSize(size) {
+  	textCapSub2.css('font-size', size);
+	}
+
   function hideButton(button) {
     button.hide();
   }
@@ -226,23 +319,69 @@ $(function() {
     button.show();
   }
 
+  function hideDiv(div) {
+    div.show();
+  }
+
+  function showDiv(div) {
+    div.hide();
+  }
+
   translateLang(storedLang);
   setSlide1SubBoxHeight(storedLang === 'sp' ? 350 : 320);
   setSlide2SubBoxHeight(storedLang === 'sp' ? 475 : 415);
   setSlide3SubBoxHeight(storedLang === 'sp' ? 455 : 380);
   setSlide4SubBoxHeight(storedLang === 'sp' ? 485 : 415);
+  textCapSub1FontSize(storedLang === 'sp' ? 16 : 18);
+  textCapSub2FontSize(storedLang === 'sp' ? 14 : 16);
+
+$(document).ready(function() {
+  var storedLang = localStorage.getItem('stored_lang');
+  if (storedLang) {
+    translateLang(storedLang);
+    setSlide1SubBoxHeight(storedLang === 'sp' ? 350 : 320);
+    setSlide2SubBoxHeight(storedLang === 'sp' ? 475 : 415);
+    setSlide3SubBoxHeight(storedLang === 'sp' ? 455 : 380);
+    setSlide4SubBoxHeight(storedLang === 'sp' ? 485 : 415);
+    textCapSub1FontSize(storedLang === 'sp' ? 16 : 18);
+    textCapSub2FontSize(storedLang === 'sp' ? 14 : 16);
+    hideButton(storedLang === 'sp' ? mrButton : enButton);
+    showButton(storedLang === 'sp' ? enButton : mrButton);
+    hideDiv(storedLang === 'sp' ? spTimeline1 : enTimeline1);
+    showDiv(storedLang === 'sp' ? enTimeline1 : spTimeline1);
+    hideDiv(storedLang === 'sp' ? spTimeline2 : enTimeline2);
+    showDiv(storedLang === 'sp' ? enTimeline2 : spTimeline2);
+    hideDiv(storedLang === 'sp' ? spTimeline3 : enTimeline3);
+    showDiv(storedLang === 'sp' ? enTimeline3 : spTimeline3);
+    hideDiv(storedLang === 'sp' ? spTimeline4 : enTimeline4);
+    showDiv(storedLang === 'sp' ? enTimeline4 : spTimeline4);
+  }
+
+
 
   $('.translate').click(function() {
-    var lang = $(this).attr('id');
-    localStorage.setItem('stored_lang', lang);
-    translateLang(lang);
-    setSlide1SubBoxHeight(lang === 'sp' ? 350 : 320);
-    setSlide2SubBoxHeight(lang === 'sp' ? 475 : 415);
-    setSlide3SubBoxHeight(lang === 'sp' ? 455 : 380);
-    setSlide4SubBoxHeight(lang === 'sp' ? 485 : 415);
-    hideButton(lang === 'sp' ? mrButton : enButton);
-    showButton(lang === 'sp' ? enButton : mrButton);
+      var lang = $(this).attr('id');
+      localStorage.setItem('stored_lang', lang);
+      translateLang(lang);
+      setSlide1SubBoxHeight(lang === 'sp' ? 350 : 320);
+      setSlide2SubBoxHeight(lang === 'sp' ? 475 : 415);
+      setSlide3SubBoxHeight(lang === 'sp' ? 455 : 380);
+      setSlide4SubBoxHeight(lang === 'sp' ? 485 : 415);
+      textCapSub1FontSize(lang === 'sp' ? 16 : 18);
+      textCapSub2FontSize(lang === 'sp' ? 14 : 16);
+      hideButton(lang === 'sp' ? mrButton : enButton);
+      showButton(lang === 'sp' ? enButton : mrButton);
+
+      hideDiv(lang === 'sp' ? spTimeline1 : enTimeline1);
+      showDiv(lang === 'sp' ? enTimeline1 : spTimeline1);
+      hideDiv(lang === 'sp' ? spTimeline2 : enTimeline2);
+      showDiv(lang === 'sp' ? enTimeline2 : spTimeline2);
+      hideDiv(lang === 'sp' ? spTimeline3 : enTimeline3);
+      showDiv(lang === 'sp' ? enTimeline3 : spTimeline3);
+      hideDiv(lang === 'sp' ? spTimeline4 : enTimeline4);
+      showDiv(lang === 'sp' ? enTimeline4 : spTimeline4);
   });
+});
 
   mrButton.click(function() {
     setSlide1SubBoxHeight(350);
