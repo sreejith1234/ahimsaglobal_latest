@@ -129,6 +129,9 @@ var arrLang = {
     		'ourlocation': 'Our Locations',
     		'ourproducts': 'Our Products',
     		'copyright': 'Copyright',
+
+    		'parameters': 'parameters',
+    		'over': 'over',
     },
 
     'sp': {
@@ -261,6 +264,9 @@ var arrLang = {
     		'ourlocation': 'Nuestras sedes',
     		'ourproducts': 'Nuestros productos',
     		'copyright': 'Derechos de autor',
+
+    		'parameters': 'parámetros',
+    		'over': 'en',
     }
 };
 
