@@ -14,11 +14,11 @@
 	<script>
 		const apiKey = '07bda853340048d01051cbfd24997735'; // Replace this with your actual API key from ipstack
 
-		fetch(`http://api.ipify.org?format=json`).then((response) => {
+		fetch(`https://api.ipify.org?format=json`).then((response) => {
     		return response.json();
 		}).then((json) => {
 	    	const ipAddress = json.ip;
-	    	fetch(`http://api.ipstack.com/${ipAddress}?access_key=${apiKey}`).then((response) => {
+	    	fetch(`https://api.ipstack.com/${ipAddress}?access_key=${apiKey}`).then((response) => {
 	        	return response.json();
 	    	}).then((json) => {
 	        	console.log(json); // Log the JSON response object to the console
