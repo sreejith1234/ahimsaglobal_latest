@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IP Address and Country Example</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $.getJSON("https://ipinfo.io/json", function(data) {
-        var ip = data.ip;
-        var country = data.country;
-        $("#ip-address").text(ip);
-        $("#country").text(country);
-      });
-    });
-  </script>
+	<title>IP Address and Country Name</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <h1>IP Address and Country Example</h1>
-  <p>Your IP address is: <span id="ip-address"></span></p>
-  <p>Your country is: <span id="country"></span></p>
+	<h1>IP Address and Country Name</h1>
+	<p id="ip-address"></p>
+	<p id="country-name"></p>
+
+	<script type="text/javascript">
+	    const api_key = "at_0BdAWoLT79lZbivJddgUAXaIXIWYm";
+	    fetch(`https://api.ipify.org?format=json`).then((response) => {
+	        return response.json();
+	    }).then((json) => {
+	        const ip = json.ip;
+	        $.ajax({
+	            url: "https://geo.ipify.org/api/v1",
+	            data: {apiKey: api_key, ipAddress: ip},
+	            success: function(data) {
+	                console.log(data);
+	                const country = data.location.country;
+	                document.getElementById("ip-address").innerHTML = `Your IP address is: ${ip}`;
+	                document.getElementById("country-name").innerHTML = `Your IP address is located in: ${country}`;
+	            }
+	        });
+	    });
+	</script>
+	<!-- <script>
+	    $(document).ready(function() {
+	      $.getJSON("https://ipinfo.io/json", function(data) {
+	        var ip = data.ip;
+	        var country = data.country;
+	        $("#ip-address").text(ip);
+	        $("#country-name").text(country);
+	      });
+	    });
+  </script> -->
 </body>
 </html>
