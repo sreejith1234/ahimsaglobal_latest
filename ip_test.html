@@ -11,7 +11,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
-	<script>
+	<!-- <script>
 		const apiKey = '07bda853340048d01051cbfd24997735'; // Replace this with your actual API key from ipstack
 
 		fetch(`http://api.ipify.org?format=json`).then((response) => {
@@ -26,7 +26,19 @@
 	        	alert(`Your IP address is located in ${country}.`);
 	    	});
 		});
+	</script> -->
+<script>
+	$(document).ready(function() {
+  $.getJSON("https://ipinfo.io/json", function(data) {
+    var ip = data.ip;
+    var country = data.country;
+    alert("Your IP address is " + ip + " and your country is " + country);
+  });
+});
+
+
 	</script>
+
 	
 </body>
 </html>
