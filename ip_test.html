@@ -1,44 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <title>IP Address and Country Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.getJSON("https://ipinfo.io/json", function(data) {
+        var ip = data.ip;
+        var country = data.country;
+        $("#ip-address").text(ip);
+        $("#country").text(country);
+      });
+    });
+  </script>
 </head>
 <body>
-
-	<h1> Find IP address and location </h1>
-
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-
-	<!-- <script>
-		const apiKey = '07bda853340048d01051cbfd24997735'; // Replace this with your actual API key from ipstack
-
-		fetch(`http://api.ipify.org?format=json`).then((response) => {
-    		return response.json();
-		}).then((json) => {
-	    	const ipAddress = json.ip;
-	    	fetch(`http://api.ipstack.com/${ipAddress}?access_key=${apiKey}`).then((response) => {
-	        	return response.json();
-	    	}).then((json) => {
-	        	console.log(json); // Log the JSON response object to the console
-	        	const country = json.country_name;
-	        	alert(`Your IP address is located in ${country}.`);
-	    	});
-		});
-	</script> -->
-<script>
-	$(document).ready(function() {
-  $.getJSON("https://ipinfo.io/json", function(data) {
-    var ip = data.ip;
-    var country = data.country;
-    alert("Your IP address is " + ip + " and your country is " + country);
-  });
-});
-
-
-	</script>
-
-	
+  <h1>IP Address and Country Example</h1>
+  <p>Your IP address is: <span id="ip-address"></span></p>
+  <p>Your country is: <span id="country"></span></p>
 </body>
 </html>
