@@ -9,24 +9,26 @@
 	<p id="ip-address"></p>
 	<p id="country-name"></p>
  
-	<script type="text/javascript">
-	    const api_key = "at_0BdAWoLT79lZbivJddgUAXaIXIWYm";
-	    fetch(`https://api.ipify.org?format=json`).then((response) => {
-	        return response.json();
-	    }).then((json) => {
-	        const ip = json.ip;
-	        $.ajax({
-	            url: "https://geo.ipify.org/api/v1",
-	            data: {apiKey: api_key, ipAddress: ip},
-	            success: function(data) {
-	                console.log(data);
-	                const country = data.location.country;
-	                document.getElementById("ip-address").innerHTML = `Your IP address is: ${ip}`;
-	                document.getElementById("country-name").innerHTML = `Your IP address is located in: ${country}`;
-	            }
-	        });
-	    });
-	</script>
+<script>
+    const api_key = "at_0BdAWoLT79lZbivJddgUAXaIXIWYm";
+    fetch(`https://api.ipify.org?format=json`).then((response) => {
+        return response.json();
+    }).then((json) => {
+        const ip = json.ip;
+        $.ajax({
+            url: "https://geo.ipify.org/api/v1",
+            data: {apiKey: api_key, ipAddress: ip},
+            success: function(data) {
+                console.log(data);
+                const country = data.location.country;
+                document.getElementById("ip-address").innerHTML = `Your IP address is: ${ip}`;
+                document.getElementById("country-name").innerHTML = `Your IP address is located in: ${country}`;
+            }
+        });
+    });
+</script>
+
+
 	<!-- <script>
 	    $(document).ready(function() {
 	      $.getJSON("https://ipinfo.io/json", function(data) {
