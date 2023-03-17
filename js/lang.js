@@ -286,10 +286,10 @@ $(function() {
         switch (country) {
           case "IN":
             storedLang = 'en';
-            $('#changeLangBtn').show();
+            $('#changeLangBtn').hide();
             $('#returnLangBtn').hide();
             break;
-          case "ES":
+          case "CA":
             storedLang = 'sp';
             $('#changeLangBtn').show();
             $('#returnLangBtn').hide();
@@ -332,7 +332,6 @@ $(function() {
     $('.lang').each(function() {
       $(this).text(arrLang[lang][$(this).attr('key')]);
     });
-
     if (lang === 'sp') {
         $('#slide1_sub_box').css('height', '350px');
         $('#slide2_sub_box').css('height', '475px');
@@ -349,5 +348,5 @@ $(function() {
         $('.text-cap-sub-2').css('font-size', '16px');
     }
   }
-
 });
+
