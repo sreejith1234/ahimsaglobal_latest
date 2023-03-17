@@ -286,10 +286,10 @@ $(function() {
         switch (country) {
           case "IN":
             storedLang = 'en';
-            $('#changeLangBtn').hide();
+            $('#changeLangBtn').show();
             $('#returnLangBtn').hide();
             break;
-          case "CA":
+          case "ES":
             storedLang = 'sp';
             $('#changeLangBtn').show();
             $('#returnLangBtn').hide();
@@ -332,6 +332,22 @@ $(function() {
     $('.lang').each(function() {
       $(this).text(arrLang[lang][$(this).attr('key')]);
     });
-  }
-});
 
+    if (lang === 'sp') {
+        $('#slide1_sub_box').css('height', '350px');
+        $('#slide2_sub_box').css('height', '475px');
+        $('#slide3_sub_box').css('height', '455px');
+        $('#slide4_sub_box').css('height', '485px');
+        $('.text-cap-sub-1').css('font-size', '16px');
+        $('.text-cap-sub-2').css('font-size', '14px');
+    } else {
+        $('#slide1_sub_box').css('height', '320px');
+        $('#slide2_sub_box').css('height', '415px');
+        $('#slide3_sub_box').css('height', '380px');
+        $('#slide4_sub_box').css('height', '415px');
+        $('.text-cap-sub-1').css('font-size', '18px');
+        $('.text-cap-sub-2').css('font-size', '16px');
+    }
+  }
+
+});
