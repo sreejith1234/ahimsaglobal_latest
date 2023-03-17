@@ -283,18 +283,19 @@ $(function() {
       success: function(data) {
         console.log(data);
         const country = data.location.country;
-        switch (country) {
-          case "IN":
+        if(country == 'IN'){
             storedLang = 'en';
             $('#changeLangBtn').hide();
             $('#returnLangBtn').hide();
-            break;
-          case "CA":
+        }else if ( country == 'AR' || country == 'BO' || country == 'CL' || country == 'CO' || country == 'CR' 
+            || country == 'CU' || country == 'DO' || country == 'EC' || country == 'SV' || country == 'GQ' 
+            || country == 'GT' || country == 'HN' || country == 'MX' || country == 'NI' || country == 'PA' 
+            || country == 'PY' || country == 'PE' || country == 'ES' || country == 'UY' || country == 'VE' 
+            || country == 'PR'){
             storedLang = 'sp';
             $('#changeLangBtn').show();
             $('#returnLangBtn').hide();
-            break;
-          default:
+        }else{
             storedLang = localStorage.getItem('stored_lang') || 'en';
             if (storedLang === 'sp') {
               $('#changeLangBtn').show();
@@ -349,4 +350,3 @@ $(function() {
     }
   }
 });
-
