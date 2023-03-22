@@ -356,18 +356,23 @@ $(function() {
         $('#slide4_sub_box').css('height', '485px');
         $('.text-cap-sub-1').css('font-size', '16px');
         $('.text-cap-sub-2').css('font-size', '14px');
-        const pt4cl9 = document.querySelector('#pt4 .cls-9');
-        pt4cl9.setAttribute('x', '-3');
-        const pt4cl8 = document.querySelector('#pt4 .cls-8');
-        pt4cl8.setAttribute('x', '-3');
-        const pt3cl9 = document.querySelector('#pt3 .cls-9');
-        pt3cl9.setAttribute('x', '1');
-        const pt3cl8 = document.querySelector('#pt3 .cls-8');
-        pt3cl8.setAttribute('x', '2');
-        const pt2cl9 = document.querySelector('#pt2 .cls-9');
-        pt2cl9.setAttribute('x', '2.08');
-        const pt2cl8 = document.querySelector('#pt2 .cls-8');
-        pt2cl8.setAttribute('x', '-7');
+    
+        const elements = [
+          { selector: '#pt4 .cls-9', value: '-3' },
+          { selector: '#pt4 .cls-8', value: '-3' },
+          { selector: '#pt3 .cls-9', value: '1' },
+          { selector: '#pt3 .cls-8', value: '2' },
+          { selector: '#pt2 .cls-9', value: '2.08' },
+          { selector: '#pt2 .cls-8', value: '-7' },
+        ];
+
+        elements.forEach((element) => {
+          const el = document.querySelector(element.selector);
+          if (el) {
+            el.setAttribute('x', element.value);
+          }
+        });
+
         
     } else {
         $('#slide1_sub_box').css('height', '320px');
@@ -376,18 +381,22 @@ $(function() {
         $('#slide4_sub_box').css('height', '415px');
         $('.text-cap-sub-1').css('font-size', '18px');
         $('.text-cap-sub-2').css('font-size', '16px');
-        const pt4cl9 = document.querySelector('#pt4 .cls-9');
-        pt4cl9.setAttribute('x', '1.5');
-        const pt4cl8 = document.querySelector('#pt4 .cls-8');
-        pt4cl8.setAttribute('x', '0');
-        const pt3cl9 = document.querySelector('#pt3 .cls-9');
-        pt3cl9.setAttribute('x', '-0.5');
-        const pt3cl8 = document.querySelector('#pt3 .cls-8');
-        pt3cl8.setAttribute('x', '1');
-        const pt2cl9 = document.querySelector('#pt2 .cls-9');
-        pt2cl9.setAttribute('x', '-2.5');
-        const pt2cl8 = document.querySelector('#pt2 .cls-8');
-        pt2cl8.setAttribute('x', '1');
+        const elements = [
+          { selector: '#pt4 .cls-9', value: '1.5' },
+          { selector: '#pt4 .cls-8', value: '0' },
+          { selector: '#pt3 .cls-9', value: '-0.5' },
+          { selector: '#pt3 .cls-8', value: '1' },
+          { selector: '#pt2 .cls-9', value: '-2.5' },
+          { selector: '#pt2 .cls-8', value: '1' },
+        ];
+
+        elements.forEach((element) => {
+          const el = document.querySelector(element.selector);
+          if (el) {
+            el.setAttribute('x', element.value);
+          }
+        });
+
 
     }
   }
